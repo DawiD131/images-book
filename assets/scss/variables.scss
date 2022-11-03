@@ -1,6 +1,9 @@
-// simple colors
+// colors
 $color-white: #fff;
 $color-black: #000;
+
+$color-success: #7bba89;
+$color-primary: #feffdb;
 
 // backgrounds
 $app-background: linear-gradient(
@@ -14,4 +17,5 @@ $form-background: rgba(255, 255, 255, 0.26);
 
 $radius-primary: 1.4rem;
 
-$shadow-primary: 8px 10px 25px rgba(0, 0, 0, 0.25);
+$shadow-big: 8px 10px 25px rgba(0, 0, 0, 0.25);
+$shadow-small: 4px 4px 11px rgba(0, 0, 0, 0.25);

@@ -5,11 +5,18 @@
       <Input placeholder="email" />
       <Input placeholder="password" />
     </div>
+    <Button
+      text="login"
+      class="auth-form__button"
+      button-type="success"
+      to="/albums"
+    />
   </form>
 </template>
 
 <script lang="ts" setup>
 import Input from "~/components/atoms/Input.vue";
+import Button from "~/components/atoms/Button.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -22,7 +29,7 @@ import Input from "~/components/atoms/Input.vue";
   background: $form-background;
   padding: 2.5rem 3.5rem;
   border-radius: $radius-primary;
-  box-shadow: $shadow-primary;
+  box-shadow: $shadow-big;
 
   &__title {
     font-size: 2.4rem;
@@ -35,6 +42,10 @@ import Input from "~/components/atoms/Input.vue";
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+  }
+
+  &__button {
+    margin-top: 18rem;
   }
 }
 </style>

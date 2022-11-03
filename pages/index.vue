@@ -17,5 +17,6 @@ import AuthForm from "~/components/organisms/AuthForm.vue";
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5rem;
 }
 </style>
