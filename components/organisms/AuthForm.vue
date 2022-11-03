@@ -1,11 +1,16 @@
 <template>
   <form class="auth-form">
     <h4 class="auth-form__title">Hello!</h4>
-    <div class="auth-form__inputs"></div>
+    <div class="auth-form__inputs">
+      <Input placeholder="email" />
+      <Input placeholder="password" />
+    </div>
   </form>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Input from "~/components/atoms/Input.vue";
+</script>
 
 <style lang="scss" scoped>
 .auth-form {
@@ -17,13 +22,19 @@
   background: $form-background;
   padding: 2.5rem 3.5rem;
   border-radius: $radius-primary;
+  box-shadow: $shadow-primary;
 
   &__title {
     font-size: 2.4rem;
     font-weight: 300;
+    margin-bottom: 3.5rem;
   }
 
   &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
   }
 }
 </style>
