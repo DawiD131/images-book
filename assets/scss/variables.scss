@@ -1,1 +1,11 @@
-$background: red;
+// simple colors
+$color-white: #fff;
+$color-black: #000;
+
+// backgrounds
+$app-background: linear-gradient(
+  180deg,
+  #b451bd 0%,
+  #2d1c66 99.99%,
+  rgba(64, 16, 255, 0.22) 100%
+);

@@ -1,7 +1,14 @@
 <template>
-  <div>
+  <div class="app">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.app {
+  min-height: 100vh;
+  background: $app-background;
+}
+</style>

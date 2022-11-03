@@ -1,9 +1,12 @@
 <template>
-  <div>test</div>
+  <Logo />
 </template>
+
+<script lang="ts" setup>
+import Logo from "~/components/atoms/Logo.vue";
+</script>
 
 <style lang="scss">
 div {
-  background: $background;
 }
 </style>
