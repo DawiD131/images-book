@@ -1,9 +1,9 @@
 <template>
-  <Logo />
+  <Navbar></Navbar>
 </template>
 
 <script lang="ts" setup>
-import Logo from "~/components/atoms/Logo.vue";
+import Navbar from "~/components/organisms/Navbar.vue";
 </script>
 
 <style lang="scss">
