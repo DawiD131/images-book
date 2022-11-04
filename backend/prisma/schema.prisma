@@ -13,4 +13,7 @@ model User {
   username String
   name String
   surname String
+  pwdHash String
+  currentToken String?
 }
+
