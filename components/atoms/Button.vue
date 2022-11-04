@@ -7,14 +7,14 @@
     >{{ props.text }}</NuxtLink
   >
   <button v-else class="button" :class="props.buttonType">
-    {{ props.text }}}
+    {{ props.text }}
   </button>
 </template>
 
 <script lang="ts" setup>
 import { defineProps } from "@vue/runtime-core";
 
-type ButtonType = "primary" | "success";
+type ButtonType = "primary" | "success" | "info";
 
 export interface Props {
   text: string;
@@ -43,6 +43,7 @@ const props = withDefaults(defineProps<Props>(), {
   align-items: center;
   color: $color-black;
   text-decoration: none;
+  font-family: $app-font-family;
 
   &:hover {
     transform: translateY(-3px);
@@ -55,6 +56,10 @@ const props = withDefaults(defineProps<Props>(), {
 
   &.success {
     background: $color-success;
+  }
+
+  &.info {
+    background: $color-info;
   }
 }
 </style>

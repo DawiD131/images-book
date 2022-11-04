@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
-    <Logo />
-    <nav>
+    <Logo class="navbar__logo" />
+    <nav class="navbar__nav">
       <slot name="nav-buttons"></slot>
     </nav>
   </header>
@@ -11,8 +11,20 @@
 import Logo from "../atoms/Logo.vue";
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
-  padding: 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+
+  &__logo {
+    flex-grow: 1;
+  }
+  &__nav {
+    display: flex;
+    gap: 1rem;
+    max-height: 4rem;
+  }
 }
 </style>

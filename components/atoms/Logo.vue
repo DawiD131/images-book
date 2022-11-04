@@ -16,12 +16,12 @@ import { logo } from "~/components/shared/icons";
   gap: 1.2rem;
 
   &__image {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
 
   &__text {
-    font-size: 3.4rem;
+    font-size: 3rem;
     color: $color-white;
     font-weight: 300;
   }

@@ -1,19 +1,18 @@
-// colors
-$color-white: #fff;
-$color-black: #000;
-
-$color-success: #7bba89;
-$color-primary: #feffdb;
-
-// backgrounds
 $app-background: linear-gradient(
   180deg,
   #b451bd 0%,
   #2d1c66 99.99%,
   rgba(64, 16, 255, 0.22) 100%
 );
+$app-font-family: "Open Sans", sans-serif;
 
-$form-background: rgba(255, 255, 255, 0.26);
+$color-white: #fff;
+$color-black: #000;
+$color-success: #7bba89;
+$color-info: #77d6ff;
+$color-primary: #feffdb;
+
+$light-background: rgba(255, 255, 255, 0.26);
 
 $radius-primary: 1.4rem;
 
