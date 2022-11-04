@@ -11,6 +11,7 @@
         class="albums__control-bar__add-button"
         text="add new album"
         button-type="success"
+        @click="() => setModalState(true)"
       />
     </div>
     <div class="albums__albums-wrapper">
@@ -29,6 +30,9 @@ import Navbar from "../components/organisms/Navbar.vue";
 import AlbumTile from "../components/organisms/AlbumTile.vue";
 import Button from "../components/atoms/Button.vue";
 import AlbumsModal from "~/components/organisms/modals/AlbumsModal.vue";
+import {useModal} from "~/composables/useModals";
+
+const {setModalState} = useModal("albumsModal");
 </script>
 
 <style lang="scss">
