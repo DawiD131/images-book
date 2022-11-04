@@ -27,10 +27,10 @@ export default {
   backdrop-filter: blur(3px);
 
   &__content {
-    background: $color-white;
+    background: $modal-background;
     border-radius: $radius-primary;
     box-shadow: $shadow-big;
-    padding: 3rem 4rem;
+    padding: 4rem 4.5rem;
   }
 }
 </style>

@@ -20,7 +20,7 @@
       <AlbumTile />
       <AlbumTile />
     </div>
-    <ModalLayout> asdasd </ModalLayout>
+    <AlbumsModal />
   </div>
 </template>
 
@@ -28,7 +28,7 @@
 import Navbar from "../components/organisms/Navbar.vue";
 import AlbumTile from "../components/organisms/AlbumTile.vue";
 import Button from "../components/atoms/Button.vue";
-import ModalLayout from "~/components/atoms/ModalLayout.vue";
+import AlbumsModal from "~/components/organisms/modals/AlbumsModal.vue";
 </script>
 
 <style lang="scss">
