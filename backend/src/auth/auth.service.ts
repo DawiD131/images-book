@@ -29,6 +29,11 @@ export class AuthService {
     };
   }
 
+  private filter(user: User) {
+    const { id, email, username, surname, name } = user;
+    return { id, username, email, surname, name };
+  }
+
   private async generateToken(user: User): Promise<string> {
     let token;
     let userWithThisToken = null;
@@ -76,7 +81,7 @@ export class AuthService {
           httpOnly: true,
         })
         .status(200)
-        .json({ userName: req.email });
+        .json(this.filter(user));
     } catch (e) {
       return res.json({ error: e.message });
     }

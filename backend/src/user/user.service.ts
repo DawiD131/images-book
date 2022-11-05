@@ -14,7 +14,7 @@ export class UserService {
   }
 
   async register(newUser: RegisterDto) {
-    const isUserExists = this.prisma.user.count({
+    const isUserExists = await this.prisma.user.count({
       where: {
         OR: [{ email: newUser.email }, { username: newUser.username }],
       },
