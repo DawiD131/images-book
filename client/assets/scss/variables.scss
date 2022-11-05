@@ -1,0 +1,21 @@
+$app-background: linear-gradient(
+  180deg,
+  #b451bd 0%,
+  #2d1c66 99.99%,
+  rgba(64, 16, 255, 0.22) 100%
+);
+$app-font-family: "Open Sans", sans-serif;
+
+$color-white: #fff;
+$color-black: #000;
+$color-success: #7bba89;
+$color-info: #77d6ff;
+$color-primary: #feffdb;
+
+$light-background: rgba(255, 255, 255, 0.26);
+$modal-background: #dadada;
+
+$radius-primary: 1.4rem;
+
+$shadow-big: 8px 10px 25px rgba(0, 0, 0, 0.25);
+$shadow-small: 4px 4px 11px rgba(0, 0, 0, 0.25);
