@@ -4,7 +4,7 @@
       <span class="album-tile__info__title"> Animals images </span>
       <span class="album-tile__info__author">author: Tom Petty</span>
     </div>
-    <Button text="See album" class="album-tile__button" button-type="info" />
+    <Button text="See album" class="album-tile__button" button-type="info"/>
   </div>
 </template>
 

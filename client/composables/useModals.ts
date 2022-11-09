@@ -1,6 +1,6 @@
-import {computed, ComputedRef} from "@vue/reactivity";
-import {useModalsStore} from "../store/ModalsStore";
-import {ModalKey} from "../models/modals";
+import { computed, ComputedRef } from "@vue/reactivity";
+import { useModalsStore } from "~/store/ModalsStore";
+import { ModalKey } from "~/models";
 
 interface IUseModal {
     modalState: ComputedRef<boolean>;

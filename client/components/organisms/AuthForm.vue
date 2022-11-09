@@ -2,25 +2,25 @@
   <form class="auth-form">
     <h4 class="auth-form__title">Hello!</h4>
     <div class="auth-form__inputs">
-      <Input placeholder="email" />
-      <Input placeholder="password" />
+      <Input placeholder="email"/>
+      <Input placeholder="password"/>
     </div>
     <Button
-      text="login"
-      class="auth-form__button"
-      button-type="success"
-      to="/albums"
+        text="login"
+        class="auth-form__button"
+        button-type="success"
+        to="/albums"
     />
   </form>
 </template>
 
 <script lang="ts" setup>
-import {onMounted} from "@vue/runtime-core";
+import { onMounted } from "@vue/runtime-core";
 import Input from "~/components/atoms/Input.vue";
 import Button from "~/components/atoms/Button.vue";
-import {useUserStore} from "~/store/UserStore";
+import { useUserStore } from "~/store/UserStore";
 
-const {login} = useUserStore();
+const { login } = useUserStore();
 
 onMounted(() => {
   login({

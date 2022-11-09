@@ -1,10 +1,11 @@
 <template>
   <NuxtLink
-    v-if="props.to"
-    :to="props.to"
-    class="button"
-    :class="props.buttonType"
-    >{{ props.text }}</NuxtLink
+      v-if="props.to"
+      :to="props.to"
+      class="button"
+      :class="props.buttonType"
+  >{{ props.text }}
+  </NuxtLink
   >
   <button v-else class="button" :class="props.buttonType">
     {{ props.text }}

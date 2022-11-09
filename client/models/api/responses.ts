@@ -1,9 +1,9 @@
-import {User} from "~/models/user";
+import { User } from "~/models/user";
 
-interface GenericResponse<T> {
-    data: T
-}
+type GenericResponse<T> = Promise<{ data: T }>
 
-export type LoginResponse = Promise<GenericResponse<User>>
+export type LoginResponse = GenericResponse<User>
 
-export type RegisterResponse = Promise<GenericResponse<User>>
+export type RegisterResponse = GenericResponse<User>
+
+export type UserResponse = GenericResponse<User>

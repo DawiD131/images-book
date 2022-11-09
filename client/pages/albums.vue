@@ -2,26 +2,26 @@
   <div class="albums">
     <Navbar>
       <template #nav-buttons>
-        <Button text="posts" />
-        <Button text="account" />
+        <Button text="posts"/>
+        <Button text="account"/>
       </template>
     </Navbar>
     <div class="albums__control-bar">
       <Button
-        class="albums__control-bar__add-button"
-        text="add new album"
-        button-type="success"
-        @click="() => setModalState(true)"
+          class="albums__control-bar__add-button"
+          text="add new album"
+          button-type="success"
+          @click="() => setModalState(true)"
       />
     </div>
     <div class="albums__albums-wrapper">
-      <AlbumTile />
-      <AlbumTile />
-      <AlbumTile />
-      <AlbumTile />
-      <AlbumTile />
+      <AlbumTile/>
+      <AlbumTile/>
+      <AlbumTile/>
+      <AlbumTile/>
+      <AlbumTile/>
     </div>
-    <AlbumsModal />
+    <AlbumsModal/>
   </div>
 </template>
 
@@ -30,9 +30,14 @@ import Navbar from "../components/organisms/Navbar.vue";
 import AlbumTile from "../components/organisms/AlbumTile.vue";
 import Button from "../components/atoms/Button.vue";
 import AlbumsModal from "~/components/organisms/modals/AlbumsModal.vue";
-import {useModal} from "~/composables/useModals";
+import { useModal } from "~/composables/useModals";
 
-const {setModalState} = useModal("albumsModal");
+const { setModalState } = useModal("albumsModal");
+
+definePageMeta({
+  middleware: ["auth"]
+});
+
 </script>
 
 <style lang="scss">

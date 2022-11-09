@@ -2,7 +2,7 @@
   <div>
     <Navbar></Navbar>
     <div class="form-wrapper">
-      <AuthForm />
+      <AuthForm/>
     </div>
   </div>
 </template>
