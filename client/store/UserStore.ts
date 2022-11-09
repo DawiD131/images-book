@@ -1,6 +1,6 @@
 import {defineStore} from "pinia";
 import {User} from "~/models/user";
-import {loginReq} from "~/services";
+import {loginReq} from "~/repository";
 import {LoginPayload} from "~/models";
 
 interface State {
