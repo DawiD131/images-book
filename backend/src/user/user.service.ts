@@ -1,17 +1,13 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { RegisterDto } from './dto/register.dto';
 import { hashPwd } from '../utils/hash-pwd';
-import { User } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
+import { userFilter } from '../filters/userFilter';
+import { User } from '@prisma/client';
 
 @Injectable()
 export class UserService {
   constructor(private prisma: PrismaService) {}
-
-  filter(user: User) {
-    const { id, email, username, surname, name } = user;
-    return { id, username, email, surname, name };
-  }
 
   async register(newUser: RegisterDto) {
     const isUserExists = await this.prisma.user.count({
@@ -34,6 +30,10 @@ export class UserService {
       },
     });
 
-    return this.filter(user as unknown as User);
+    return userFilter(user);
+  }
+
+  async getFilteredUser(user: User) {
+    return userFilter(user);
   }
 }
