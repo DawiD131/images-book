@@ -1,9 +1,9 @@
-import { defineNuxtRouteMiddleware } from "#app";
-import { useUser } from "~/composables/useUser";
+import {  defineNuxtRouteMiddleware, navigateTo, useCookie } from "#app";
 
-export default defineNuxtRouteMiddleware(  async() => {
-const { currentUser, loadCurrentUser } = useUser();
- await loadCurrentUser();
-    console.log(currentUser);
+export default defineNuxtRouteMiddleware(() => {
+    const isAuth = useCookie("isAuth");
+    if (isAuth.value === false) {
+        return navigateTo('/');
+    }
 });
 

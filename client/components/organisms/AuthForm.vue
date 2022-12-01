@@ -10,24 +10,23 @@
         class="auth-form__button"
         button-type="success"
         to="/albums"
+        @click="loginUser"
     />
   </form>
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from "@vue/runtime-core";
 import Input from "~/components/atoms/Input.vue";
 import Button from "~/components/atoms/Button.vue";
 import { useUserStore } from "~/store/UserStore";
 
 const { login } = useUserStore();
 
-onMounted(() => {
-  login({
-    email: "test22@gmail.com",
-    pwd: "test21"
-  });
+const loginUser = () => login({
+  email: "test22@gmail.com",
+  pwd: "test21"
 });
+
 </script>
 
 <style lang="scss" scoped>

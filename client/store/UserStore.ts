@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { useCookie } from "#app";
 import { User } from "~/models/user";
 import { getUserReq, loginReq } from "~/repository";
 import { LoginPayload } from "~/models";
@@ -14,15 +15,27 @@ export const useUserStore = defineStore("UserStore", {
     }) as State),
     actions: {
         async login(payload: LoginPayload) {
-            const response = await loginReq(payload);
-            this.currentUser = response.data;
+            const isAuth = useCookie("isAuth");
+
+            try {
+                const response = await loginReq(payload);
+                isAuth.value = 'true';
+                this.currentUser = response.data;
+            } catch {
+                this.currentUser = null;
+                isAuth.value = 'false';
+            }
         },
         async loadUser() {
+            const isAuth = useCookie("isAuth");
+
             try {
                 const response = await getUserReq();
-                this.currentUser = response.data.username;
+                this.currentUser = response.data;
+                isAuth.value = 'true';
             } catch (e) {
                 this.currentUser = null;
+                isAuth.value = 'false';
             }
         }
     },
