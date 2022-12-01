@@ -1,10 +1,11 @@
 <template>
   <NuxtLink
-    v-if="props.to"
-    :to="props.to"
-    class="button"
-    :class="props.buttonType"
-    >{{ props.text }}</NuxtLink
+      v-if="props.to"
+      :to="props.to"
+      class="button"
+      :class="props.buttonType"
+  >{{ props.text }}
+  </NuxtLink
   >
   <button v-else class="button" :class="props.buttonType">
     {{ props.text }}
@@ -16,7 +17,7 @@ import { defineProps } from "@vue/runtime-core";
 
 type ButtonType = "primary" | "success" | "info";
 
-export interface Props {
+interface Props {
   text: string;
   buttonType?: ButtonType;
   to?: string;

@@ -1,33 +1,32 @@
 <template>
   <form class="auth-form">
-    <h4 class="auth-form__title">Hello!</h4>
+    <h4 class="auth-form__title">Welcome back!</h4>
     <div class="auth-form__inputs">
-      <Input placeholder="email" />
-      <Input placeholder="password" />
+      <Input placeholder="email"/>
+      <Input placeholder="password"/>
     </div>
     <Button
-      text="login"
-      class="auth-form__button"
-      button-type="success"
-      to="/albums"
+        text="login"
+        class="auth-form__button"
+        button-type="success"
+        to="/albums"
+        @click="loginUser"
     />
   </form>
 </template>
 
 <script lang="ts" setup>
-import {onMounted} from "@vue/runtime-core";
 import Input from "~/components/atoms/Input.vue";
 import Button from "~/components/atoms/Button.vue";
-import {useUserStore} from "~/store/UserStore";
+import { useUserStore } from "~/store/UserStore";
 
-const {login} = useUserStore();
+const { login } = useUserStore();
 
-onMounted(() => {
-  login({
-    email: "test22@gmail.com",
-    pwd: "test21"
-  });
+const loginUser = () => login({
+  email: "test22@gmail.com",
+  pwd: "test21"
 });
+
 </script>
 
 <style lang="scss" scoped>
@@ -37,7 +36,7 @@ onMounted(() => {
   flex-direction: column;
   width: 100%;
   max-width: 35rem;
-  background: $light-background;
+  background: $light-transparent-background;
   padding: 2.5rem 3.5rem;
   border-radius: $radius-primary;
   box-shadow: $shadow-big;

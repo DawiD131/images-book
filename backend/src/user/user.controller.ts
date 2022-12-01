@@ -17,6 +17,6 @@ export class UserController {
   @Get('/')
   @UseGuards(AuthGuard('jwt'))
   userInfo(@UserObj() user: User) {
-    return user;
+    return this.userService.getFilteredUser(user);
   }
 }

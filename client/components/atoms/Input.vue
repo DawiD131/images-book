@@ -1,6 +1,6 @@
 <template>
   <label class="input">
-    <input class="input__input" placeholder=" " />
+    <input class="input__input" placeholder=" "/>
     <label class="input__label">{{ props.placeholder }}</label>
   </label>
 </template>

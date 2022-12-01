@@ -24,7 +24,14 @@
   "rules": {
     "vue/multi-word-component-names": "off",
     "vue/no-v-html": "off",
-    "semi": ["error", "always"]
+    "semi": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
   }
 }
 

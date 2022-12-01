@@ -1,5 +1,5 @@
-import {defineStore} from "pinia";
-import {ModalKey, ModalsState} from "~/models/modals";
+import { defineStore } from "pinia";
+import { ModalKey, ModalsState } from "~/models/modals";
 
 export const useModalsStore = defineStore("ModalsStore", {
     state: () => (({
@@ -11,4 +11,5 @@ export const useModalsStore = defineStore("ModalsStore", {
         }
     },
 });
+
 

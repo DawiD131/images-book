@@ -11,9 +11,10 @@
 import Input from "../../atoms/Input.vue";
 import ModalLayout from "~/components/atoms/ModalLayout.vue";
 import Button from "~/components/atoms/Button.vue";
-import {useModal} from "~/composables/useModals";
+import { useModal } from "~/composables/useModals";
 
-const {modalState} = useModal("albumsModal");
+
+const { modalState } = useModal("albumsModal");
 </script>
 
 <style lang="scss" scoped>

@@ -7,6 +7,7 @@ import { JwtPayload } from './jwt.strategy';
 import { Response } from 'express';
 import { PrismaService } from '../prisma/prisma.service';
 import { User } from '@prisma/client';
+import { userFilter } from '../filters/userFilter';
 
 @Injectable()
 export class AuthService {
@@ -27,11 +28,6 @@ export class AuthService {
       accessToken,
       expiresIn,
     };
-  }
-
-  private filter(user: User) {
-    const { id, email, username, surname, name } = user;
-    return { id, username, email, surname, name };
   }
 
   private async generateToken(user: User): Promise<string> {
@@ -81,7 +77,7 @@ export class AuthService {
           httpOnly: true,
         })
         .status(200)
-        .json(this.filter(user));
+        .json(userFilter(user));
     } catch (e) {
       return res.json({ error: e.message });
     }

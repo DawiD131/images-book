@@ -1,7 +1,7 @@
 <template>
   <div class="modal-layout">
     <div class="modal-layout__content">
-      <slot />
+      <slot/>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   backdrop-filter: blur(3px);
 
   &__content {
-    background: $modal-background;
+    background: $light-background;
     border-radius: $radius-primary;
     box-shadow: $shadow-big;
     padding: 4rem 4.5rem;

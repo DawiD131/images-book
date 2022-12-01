@@ -4,7 +4,7 @@
       <span class="album-tile__info__title"> Animals images </span>
       <span class="album-tile__info__author">author: Tom Petty</span>
     </div>
-    <Button text="See album" class="album-tile__button" button-type="info" />
+    <Button text="See album" class="album-tile__button" button-type="info"/>
   </div>
 </template>
 
@@ -19,8 +19,9 @@ import Button from "~/components/atoms/Button.vue";
   width: 100%;
   height: 7.5rem;
   padding: 2rem 2.5rem;
-  background: $light-background;
+  background: $light-transparent-background;
   border-radius: $radius-primary;
+  box-shadow: $shadow-small;
 
   &__info {
     display: flex;
