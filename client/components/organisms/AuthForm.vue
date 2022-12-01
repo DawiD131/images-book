@@ -1,6 +1,6 @@
 <template>
   <form class="auth-form">
-    <h4 class="auth-form__title">Hello!</h4>
+    <h4 class="auth-form__title">Welcome back!</h4>
     <div class="auth-form__inputs">
       <Input placeholder="email"/>
       <Input placeholder="password"/>
@@ -36,7 +36,7 @@ const loginUser = () => login({
   flex-direction: column;
   width: 100%;
   max-width: 35rem;
-  background: $light-background;
+  background: $light-transparent-background;
   padding: 2.5rem 3.5rem;
   border-radius: $radius-primary;
   box-shadow: $shadow-big;

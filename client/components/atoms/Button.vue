@@ -17,7 +17,7 @@ import { defineProps } from "@vue/runtime-core";
 
 type ButtonType = "primary" | "success" | "info";
 
-export interface Props {
+interface Props {
   text: string;
   buttonType?: ButtonType;
   to?: string;

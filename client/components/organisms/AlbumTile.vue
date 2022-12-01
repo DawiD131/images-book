@@ -19,8 +19,9 @@ import Button from "~/components/atoms/Button.vue";
   width: 100%;
   height: 7.5rem;
   padding: 2rem 2.5rem;
-  background: $light-background;
+  background: $light-transparent-background;
   border-radius: $radius-primary;
+  box-shadow: $shadow-small;
 
   &__info {
     display: flex;

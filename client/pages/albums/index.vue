@@ -2,8 +2,8 @@
   <div class="albums">
     <Navbar>
       <template #nav-buttons>
-        <Button text="posts"/>
         <Button text="account"/>
+        <Button text="logout"/>
       </template>
     </Navbar>
     <div class="albums__control-bar">
@@ -26,9 +26,9 @@
 </template>
 
 <script lang="ts" setup>
-import Navbar from "../components/organisms/Navbar.vue";
-import AlbumTile from "../components/organisms/AlbumTile.vue";
-import Button from "../components/atoms/Button.vue";
+import Navbar from "../../components/organisms/Navbar.vue";
+import AlbumTile from "../../components/organisms/AlbumTile.vue";
+import Button from "../../components/atoms/Button.vue";
 import AlbumsModal from "~/components/organisms/modals/AlbumsModal.vue";
 import { useModal } from "~/composables/useModals";
 
